@@ -1,0 +1,15 @@
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counterStyle{
+  margin-left: 25px;
+}
+.loginContainer{
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
