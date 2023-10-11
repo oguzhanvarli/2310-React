@@ -6,10 +6,14 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useSelector } from 'react-redux';
 
 export default function Navbar() {
+
+  const number = useSelector(state => state.cart.cartNumber)
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box className="sticky top-0 z-50" sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -24,7 +28,7 @@ export default function Navbar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button style={{display: number === 0 ? "none" : "block"}} color="inherit">{number}</Button>
         </Toolbar>
       </AppBar>
     </Box>
