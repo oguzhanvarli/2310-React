@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { increment } from '../store/features/cartSlice'
+import { Link } from 'react-router-dom'
 
 function CardComponent({ product }) {
 
@@ -8,9 +9,9 @@ function CardComponent({ product }) {
 
     return (
         <div className="max-w-sm mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
+            <Link to="/product-detail" state={product.id}>
                 <img style={{ maxHeight: 250, minHeight: 250, minWidth: '100%' }} className="rounded-t-lg" src={product.thumbnail} alt={product.title} />
-            </a>
+            </Link>
             <div className="p-5">
                 <div>
                     <a href="#">

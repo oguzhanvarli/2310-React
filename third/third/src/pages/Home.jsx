@@ -24,7 +24,7 @@ function Home() {
     
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-        <button onClick={() => dispatch(clearCart())} className=" text-white bg-red-600 max-w-xs">Clear Cart</button>
+        {/* <button onClick={() => dispatch(clearCart())} className=" text-white bg-red-600 max-w-xs">Clear Cart</button> */}
     {data && data.map((product) => {
         return <CardComponent key={product.id} product={product}/>
     })}
