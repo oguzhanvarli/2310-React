@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Test from './pages/Test'
 import Deposit from './pages/Deposit'
 import ProductDetail from './pages/ProductDetail'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function App() {
 
